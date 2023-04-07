@@ -11,7 +11,3 @@ ESX.RegisterServerCallback("proveriItem", function(source, cb, itemName)
         cb(false)
     end
 end)
-
-server_scripts {
-    'server.lua'
-}
