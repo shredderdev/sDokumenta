@@ -1,10 +1,11 @@
 # sDokumenta
 
-1. NAJBITNIJE JE DA IMAS SKRIPTU, jsfour-idcard UBACENU AKO NEMAS EVO TI LINK SKINI JE I UBACI
+1. Najbitnije je da imate skripte jsfour-idcard i esx_license da bi skripta radila
 
 https://github.com/jonassvensson4/jsfour-idcard
+https://github.com/StockholmCityRP/esx_license
 
-2. OVO DODAJ U items.lua u ox_inventory
+2. Ovo dodajte u ox_inventory/data/items.lua
 
 	['licna'] = {
 		label = 'Licna Karta',
@@ -30,20 +31,4 @@ https://github.com/jonassvensson4/jsfour-idcard
 	  },
  },
 
-3. OVO UBACITE U BILO KOJI SERVER SIDE, PROVERA ITEMA
-
-ESX.RegisterServerCallback("proveriItem", function(source, cb, itemName)
-    local xPlayer = ESX.GetPlayerFromId(source)
-    if xPlayer ~= nil then
-        local item = xPlayer.getInventoryItem(itemName).count
-        if item ~= 0 then 
-            cb(true)
-        else
-            cb(false)
-        end
-    else
-        cb(false)
-    end
-end)
-
-3. ox_inventory/web/images, OVDE UBACITE SLIKE ZA ITEME IZ FOLDERA: Slike
+3. ox_inventory/web/images, Ovde ubacite slike iz foldera: Slike
